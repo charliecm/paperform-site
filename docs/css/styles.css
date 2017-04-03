@@ -1489,7 +1489,8 @@ p {
   line-height: 1.5rem; }
 
 a {
-  color: #3C6ACC; }
+  color: #3C6ACC;
+  text-decoration: none; }
   .no-touchevents a:hover {
     color: #5182ea; }
 
@@ -1533,7 +1534,7 @@ hr {
 .wrap-medium {
   max-width: 38.75rem; }
 
-.device-wrap {
+.ipad-wrap, .ipad-derped-wrap {
   position: relative;
   margin: 0 auto 2rem auto;
   background-image: url(../img/ipad-frame.png);
@@ -1541,17 +1542,32 @@ hr {
   background-position: center center;
   background-repeat: no-repeat;
   max-width: 45rem; }
-  .device-wrap:before {
+  .ipad-wrap:before, .ipad-derped-wrap:before {
     content: '';
-    display: block;
-    padding-top: 70.4681873%; }
+    display: block; }
+
+.ipad-wrap {
+  background-image: url(../img/ipad-frame.png); }
+  .ipad-wrap:before {
+    padding-top: 70.46819%; }
+  .ipad-wrap .video {
+    top: 6.38842%;
+    left: 8.94838%;
+    width: 82.04202%;
+    height: 87.22317%; }
+
+.ipad-derped-wrap {
+  background-image: url(../img/ipad-derped-frame.png); }
+  .ipad-derped-wrap:before {
+    padding-top: 72.02454%; }
+  .ipad-derped-wrap .video {
+    top: 6.30324%;
+    left: 9.07975%;
+    width: 82.01227%;
+    height: 87.22317%; }
 
 .video {
-  position: absolute;
-  top: 6.38842%;
-  left: 8.94838%;
-  width: 82.04202%;
-  height: 87.22317%; }
+  position: absolute; }
 
 .text-center {
   text-align: center; }

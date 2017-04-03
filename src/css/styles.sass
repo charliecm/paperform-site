@@ -40,6 +40,7 @@ p
 
 a
 	color: $color-anchor
+	text-decoration: none
 	.no-touchevents &:hover
 		color: $color-anchor-hover
 
@@ -84,7 +85,7 @@ hr
 	@extend .wrap
 	max-width: rem($wrap-medium)
 
-.device-wrap
+%device-wrap
 	position: relative
 	margin: 0 auto rem(32px) auto
 	background-image: url(../img/ipad-frame.png)
@@ -95,14 +96,31 @@ hr
 	&:before
 		content: ''
 		display: block
-		padding-top: 70.4681873%
+
+.ipad-wrap
+	@extend %device-wrap
+	background-image: url(../img/ipad-frame.png)
+	&:before
+		padding-top: percentage(587 / 833)
+	.video
+		top: percentage(37.5 / 587)
+		left: percentage(74.54 / 833)
+		width: percentage(683.41 / 833)
+		height: percentage(512 / 587)
+
+.ipad-derped-wrap
+	@extend %device-wrap
+	background-image: url(../img/ipad-derped-frame.png)
+	&:before
+		padding-top: percentage(587 / 815)
+	.video
+		top: percentage(37 / 587)
+		left: percentage(74 / 815)
+		width: percentage(668.4 / 815)
+		height: percentage(512 / 587)
 
 .video
 	position: absolute
-	top: percentage(37.5 / 587)
-	left: percentage(74.54 / 833)
-	width: percentage(683.41 / 833)
-	height: percentage(512 / 587)
 
 .text-center
 	text-align: center
