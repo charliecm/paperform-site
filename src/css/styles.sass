@@ -84,20 +84,41 @@ hr
 	@extend .wrap
 	max-width: rem($wrap-medium)
 
+.video
+	position: absolute
+	top: 0
+	width: 100%
+	height: 100%
+
+.video-wrap
+	position: relative
+	margin-bottom: rem(32px)
+	&:before
+		content: ''
+		display: block
+		padding-top: 75%
+
 .text-center
 	text-align: center
 
 .text-info
 	color: rgba($color-charcoal, 0.5)
 
+.fill-width
+	width: 100%
+
 // ----------------------------------------------------------------------------
 // Header
 // ----------------------------------------------------------------------------
 
 .header
-	padding-top: rem(64px)
-	height: rem(420px)
+	padding-top: rem(56px)
+	height: rem(640px)
 	background-color: #ebebeb
+	background-image: url(../img/hero.png)
+	background-position: center bottom
+	background-size: auto 100%
+	background-repeat: no-repeat
 
 .header__title
 	font-size: rem(31px)
@@ -138,14 +159,27 @@ hr
 .s-value__body
 	margin: 0 auto
 	max-width: rem(520px)
-	margin-bottom: rem(64px)
+	margin-bottom: rem(48px)
 
-.s-value__icon
+.s-value__img
+	display: block
 	margin: 0 auto rem(24px) auto
-	width: rem(200px)
+	width: rem(220px)
 	height: rem(200px)
 	background-color: #E98168
 	border-radius: rem(3px)
+
+// ----------------------------------------------------------------------------
+// Audit Section
+// ----------------------------------------------------------------------------
+
+.s-audit__img
+	margin-bottom: rem(48px)
+	height: rem(426px)
+	background-image: url(../img/audit.jpg)
+	background-position: center center
+	background-size: auto 100%
+	background-repeat: no-repeat
 
 // ----------------------------------------------------------------------------
 // Persona Section
@@ -176,8 +210,30 @@ hr
 	margin-top: rem(48px)
 
 // ----------------------------------------------------------------------------
+// Research Section
+// ----------------------------------------------------------------------------
+
+.s-research__hero
+	display: block
+	margin-bottom: rem(32px)
+
+.s-research__img
+	display: inline-block
+	margin-bottom: rem(12px)
+	border-radius: rem(3px)
+	width: 100%
+
+.s-research__text
+	font-size: rem(14px)
+
+// ----------------------------------------------------------------------------
 // Process Section
 // ----------------------------------------------------------------------------
+
+.s-process__hero
+	display: block
+	border-radius: rem(3px)
+	margin-bottom: rem(32px)
 
 .s-process__aside
 	font-size: rem(14px)
@@ -197,8 +253,8 @@ hr
 // Footer Section
 // ----------------------------------------------------------------------------
 
-.s--finale
-	height: rem(420px)
+.s-finale
+	padding-bottom: 0
 
 .s-finale__title
 	margin-bottom: rem(12px)
@@ -208,9 +264,17 @@ hr
 
 .s-finale__tagline
 	@extend .text-info
+	margin-bottom: rem(48px)
 	font-weight: 300
 	font-size: rem(24px)
 	text-align: center
+
+.s-finale__img
+	background-image: url(../img/finale.png)
+	background-position: center center
+	background-size: auto 100%
+	background-repeat: no-repeat
+	height: rem(720px)
 
 // ----------------------------------------------------------------------------
 // Footer

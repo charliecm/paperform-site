@@ -1527,11 +1527,25 @@ hr {
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
-  max-width: 64rem;
+  max-width: 53rem;
   width: 100%; }
 
 .wrap-medium {
-  max-width: 45rem; }
+  max-width: 38.75rem; }
+
+.video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.video-wrap {
+  position: relative;
+  margin-bottom: 2rem; }
+  .video-wrap:before {
+    content: '';
+    display: block;
+    padding-top: 75%; }
 
 .text-center {
   text-align: center; }
@@ -1539,10 +1553,17 @@ hr {
 .text-info, .s-finale__tagline {
   color: rgba(43, 43, 43, 0.5); }
 
+.fill-width {
+  width: 100%; }
+
 .header {
-  padding-top: 4rem;
-  height: 26.25rem;
-  background-color: #ebebeb; }
+  padding-top: 3.5rem;
+  height: 40rem;
+  background-color: #ebebeb;
+  background-image: url(../img/hero.png);
+  background-position: center bottom;
+  background-size: auto 100%;
+  background-repeat: no-repeat; }
 
 .header__title {
   font-size: 1.9375rem;
@@ -1575,14 +1596,23 @@ hr {
 .s-value__body {
   margin: 0 auto;
   max-width: 32.5rem;
-  margin-bottom: 4rem; }
+  margin-bottom: 3rem; }
 
-.s-value__icon {
+.s-value__img {
+  display: block;
   margin: 0 auto 1.5rem auto;
-  width: 12.5rem;
+  width: 13.75rem;
   height: 12.5rem;
   background-color: #E98168;
   border-radius: 0.1875rem; }
+
+.s-audit__img {
+  margin-bottom: 3rem;
+  height: 26.625rem;
+  background-image: url(../img/audit.jpg);
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat; }
 
 .s-persona__profile {
   display: flex;
@@ -1610,6 +1640,24 @@ hr {
 .s-persona__tasks {
   margin-top: 3rem; }
 
+.s-research__hero {
+  display: block;
+  margin-bottom: 2rem; }
+
+.s-research__img {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  border-radius: 0.1875rem;
+  width: 100%; }
+
+.s-research__text {
+  font-size: 0.875rem; }
+
+.s-process__hero {
+  display: block;
+  border-radius: 0.1875rem;
+  margin-bottom: 2rem; }
+
 .s-process__aside {
   font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.5); }
@@ -1624,8 +1672,8 @@ hr {
   width: 100%;
   border-radius: 0.1875rem; }
 
-.s--finale {
-  height: 26.25rem; }
+.s-finale {
+  padding-bottom: 0; }
 
 .s-finale__title {
   margin-bottom: 0.75rem;
@@ -1634,9 +1682,17 @@ hr {
   text-align: center; }
 
 .s-finale__tagline {
+  margin-bottom: 3rem;
   font-weight: 300;
   font-size: 1.5rem;
   text-align: center; }
+
+.s-finale__img {
+  background-image: url(../img/finale.png);
+  background-position: center center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  height: 45rem; }
 
 .footer {
   padding-top: 3rem;
