@@ -84,19 +84,25 @@ hr
 	@extend .wrap
 	max-width: rem($wrap-medium)
 
-.video
-	position: absolute
-	top: 0
-	width: 100%
-	height: 100%
-
-.video-wrap
+.device-wrap
 	position: relative
-	margin-bottom: rem(32px)
+	margin: 0 auto rem(32px) auto
+	background-image: url(../img/ipad-frame.png)
+	background-size: 100% auto
+	background-position: center center
+	background-repeat: no-repeat
+	max-width: rem(720px)
 	&:before
 		content: ''
 		display: block
-		padding-top: 75%
+		padding-top: 70.4681873%
+
+.video
+	position: absolute
+	top: percentage(37.5 / 587)
+	left: percentage(74.54 / 833)
+	width: percentage(683.41 / 833)
+	height: percentage(512 / 587)
 
 .text-center
 	text-align: center
