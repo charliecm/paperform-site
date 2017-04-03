@@ -2,9 +2,11 @@
  * Stylesheet
  */
 
+@import 'reset'
 @import 'settings'
 @import 'functions'
-@import 'reset'
+@import 'flex'
+@import 'grid'
 
 *, *:before, *:after
     box-sizing: border-box
@@ -22,3 +24,202 @@ body
 	line-height: 1
 	color: $color-text
 	background-color: $color-bg
+
+
+p, h1, h2, h3, ul, ol
+	margin-top: 0
+	margin-bottom: rem(24px)
+
+h3
+	font-size: rem(24px)
+	font-weight: 500
+
+p
+	font-size: rem(18px)
+	line-height: rem(24px)
+
+a
+	color: $color-anchor
+	.no-touchevents &:hover
+		color: $color-anchor-hover
+
+img
+	max-width: 100%
+	height: auto
+	vertical-align: bottom
+
+strong
+	font-weight: 500
+
+ol
+	font-size: rem(18px)
+	line-height: rem(24px)
+	li
+		margin-bottom: rem(24px)
+		margin-left: 2rem
+		text-indent: -1rem
+		counter-increment: item
+		&:before
+			content: counter(item) '.'
+			display: inline-block
+			padding-right: 0.5rem
+			width: 1rem
+			font-weight: 400
+			text-align: right
+
+hr
+	margin-top: rem(24px)
+	margin-bottom: rem(24px)
+	border: 0
+	border-top: solid 1px rgba(black, 0.1)
+
+.wrap
+	margin: 0 auto
+	padding-left: $wrap-padding
+	padding-right: $wrap-padding
+	max-width: rem($wrap-large)
+	width: 100%
+
+.wrap-medium
+	@extend .wrap
+	max-width: rem($wrap-medium)
+
+.text-center
+	text-align: center
+
+.text-info
+	color: rgba($color-charcoal, 0.5)
+
+// ----------------------------------------------------------------------------
+// Header
+// ----------------------------------------------------------------------------
+
+.header
+	padding-top: rem(64px)
+	height: rem(420px)
+	background-color: #ebebeb
+
+.header__title
+	font-size: rem(31px)
+	font-weight: 500
+	text-align: center
+
+// ----------------------------------------------------------------------------
+// Section
+// ----------------------------------------------------------------------------
+
+.section
+	padding-top: rem(64px)
+	padding-bottom: rem(64px)
+
+.section--alt
+	background-color: $color-silver
+
+.section--dark
+	background-color: $color-tuna
+	color: white
+
+.section__title
+	font-size: rem(16px)
+	font-weight: 500
+	text-transform: uppercase
+	color: inherit
+	opacity: 0.5
+
+// ----------------------------------------------------------------------------
+// Value Section
+// ----------------------------------------------------------------------------
+
+.s-value__title
+	font-size: rem(24px)
+	font-weight: 500
+	text-align: center
+
+.s-value__body
+	margin: 0 auto
+	max-width: rem(520px)
+	margin-bottom: rem(64px)
+
+.s-value__icon
+	margin: 0 auto rem(24px) auto
+	width: rem(200px)
+	height: rem(200px)
+	background-color: #E98168
+	border-radius: rem(3px)
+
+// ----------------------------------------------------------------------------
+// Persona Section
+// ----------------------------------------------------------------------------
+
+.s-persona__profile
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	margin-top: rem(32px)
+	+bp-gt($bp-md)
+		flex-direction: row
+		margin-bottom: rem(24px)
+
+.s-persona__photo
+	display: block
+	margin: 0 auto rem(32px) auto
+	border-radius: 50%
+	max-width: rem(180px)
+	width: 100%
+	height: auto
+	+bp-gt($bp-md)
+		margin-right: rem(24px)
+		margin-bottom: 0
+		max-width: rem(120px)
+
+.s-persona__tasks
+	margin-top: rem(48px)
+
+// ----------------------------------------------------------------------------
+// Process Section
+// ----------------------------------------------------------------------------
+
+.s-process__aside
+	font-size: rem(14px)
+	color: rgba(white, 0.5)
+
+.s-process__em
+	text-transform: uppercase
+	color: white
+
+.s-process__img
+	display: block
+	margin-bottom: rem(12px)
+	width: 100%
+	border-radius: rem(3px)
+
+// ----------------------------------------------------------------------------
+// Footer Section
+// ----------------------------------------------------------------------------
+
+.s--finale
+	height: rem(420px)
+
+.s-finale__title
+	margin-bottom: rem(12px)
+	font-size: rem(28px)
+	font-weight: 400
+	text-align: center
+
+.s-finale__tagline
+	@extend .text-info
+	font-weight: 300
+	font-size: rem(24px)
+	text-align: center
+
+// ----------------------------------------------------------------------------
+// Footer
+// ----------------------------------------------------------------------------
+
+.footer
+	padding-top: rem(48px)
+	padding-bottom: rem(64px)
+
+.footer__text
+	font-size: rem(14px)
+	text-align: center

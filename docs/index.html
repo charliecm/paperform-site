@@ -2,23 +2,270 @@
 <html>
 <head>
 	<title>Paperform</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
+	<script src="js/modernizr.js"></script>
 </head>
 <body>
-	<header class="header wrap">
-		<h1 class="header__title">
+	<header class="header">
+		<h1 class="header__title wrap">
 			Paperform
 		</h1>
 	</header>
 	<main class="main">
+		<section class="s-value section">
+			<div class="wrap">
+				<h2 class="s-value__title">
+					Make sense of what inspires you.
+				</h2>
+				<p class="s-value__body text-center">
+					Paperform is a moodboarding tool for the iPad that lets you find, organize and annotate images in a fluid and flexible way.
+				</p>
+				<div class="row">
+					<div class="col-md-4 col">
+						<div class="s-value__icon"></div>
+						<p class="text-center">
+							Infinite Canvas
+						</p>
+					</div>
+					<div class="col-md-4 col">
+						<div class="s-value__icon"></div>
+						<p class="text-center">
+							Powerful Clustering
+						</p>
+					</div>
+					<div class="col-md-4 col">
+						<div class="s-value__icon"></div>
+						<p class="text-center">
+							Seamless Search
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section--alt section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Audit
+				</h2>
+			</div>
+			<div class="wrap-medium">
+				<h3>
+					Going beyond the grid.
+				</h3>
+				<p>
+					While there’s lots of apps out there like Pinterest, Invision Boards, or Niice, they’re all grid based image layout tools. They might be great for collecting and looking at your content but they’re not so great for any kind of analytical or relational workflows. You can’t put images in groups or create your own ways of organizing them. We want to build a tool that would support and extend ways of thinking that are transient, cluttered or non-linear. By enabling a more free form approach to layout, the hope is that users would surface patterns and insights organically.
+				</p>
+			</div>
+		</section>
+		<section class="section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Research
+				</h2>
+			</div>
+			<div class="wrap-medium">
+				<h3>
+					Looking at precedents
+				</h3>
+				<p>
+					We looked into some existing research in the areas of visual analytics, digital whiteboards and gestural multi-touch. What’s currently possible on modern touchscreen devices such as iPads are still quite limited. Nearly all interactions are composed of a tap or swipe even though the hardware can detect 10 fingers. For this project we wanted to experiment with new and emerging interactions to see how they well they fit into real workflows.
+				</p>
+				<div class="row">
+					<div class="col-md-6 col">
+						<p>
+							<a href="#"><strong>Radial menus</strong></a><br>
+							Explores contextual gestural menus and semantic zooming.
+							Read paper
+						</p>
+					</div>
+					<div class="col-md-6 col">
+						<p>
+							<a href="#"><strong>Kinetica</strong></a><br>
+							Explores visualizing, manipulating and selecting clusters of multi-variate data.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="s-persona section--alt section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Persona
+				</h2>
+				<p>
+					We created a simple persona to help guide and ground our process:
+				</p>
+				<div class="s-persona__profile">
+					<img src="img/hana.jpg" class="s-persona__photo">
+					<p>
+						Hana is a graphic designer researching ideas for a new brand system. Her current workflow involves saving images of interest on Pinterest and arranging them on Adobe Illustrator. She finds this process cumbersome and wishes that there is a more efficient way of making sense of what she has collected.
+					</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col">
+						<p>
+							<strong>Audience</strong><br>
+							<span class="text-info">
+								Designers, photographers, artists
+							</span>
+						</p>
+					</div>
+					<div class="col-md-6 col">
+						<p>
+							<strong>Context</strong><br>
+							<span class="text-info">
+								Collection and organizing inspirations
+							</span>
+						</p>
+					</div>
+				</div>
+				<hr>
+				<ol class="s-persona__tasks">
+					<li>
+						<strong>Collect ideas:</strong> <span class="text-info">How might we make it easy to find and import images and other artifacts into the canvas?</span>
+					</li>
+					<li>
+						<strong>Discover insights:</strong> <span class="text-info">How might we help designers make connections between ideas in interesting ways to inspire new ideas?</span>
+					</li>
+				</ol>
+			</div>
+		</section>
+		<section class="section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Navigation
+				</h2>
+				<p>
+					On an infinite canvas, the user can place, resize and arrange images without being confined to a grid layout. Long press on an image to move it and two fingers allows for rotation and scaling. Drag an image to the trash icon in the toolbar to delete it.
+				</p>
+			</div>
+		</section>
+		<section class="section--dark section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Process
+				</h2>
+				<p>
+					We knew one of the most important interactions of the app to get right was making sure moving images was really fast and fluid. Rearranging images on the canvas should feel as easy as rearraging post-it notes on a whiteboard. We tried a bunch of ideas but narrowed it down to either a double tap to select or long press to select an image. During testing with 5 users, there wasn’t a clear winner but long press was more consistant with other interactions in the app.
+				</p>
+				<div class="row-cozy row">
+					<div class="col-md-6 col">
+						<img src="https://placehold.it/5x3" class="s-process__img">
+						<p class="s-process__aside">
+							<strong class="s-process__em">Double Tap</strong><br>
+							Pros: Can feel faster.<br>
+							Cons: Requires precise timing. Tiring over time.
+						</p>
+					</div>
+					<div class="col-md-6 col">
+						<img src="https://placehold.it/5x3" class="s-process__img">
+						<p class="s-process__aside">
+							<strong class="s-process__em">Long Press</strong><br>
+							Pros: Can feel faster.<br>
+							Cons: Requires precise timing. Tiring over time.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Organization
+				</h2>
+				<p>
+					Tapping the Select icon in the toolbar activates multiselect mode. The user can tap or draw a lasso to select multiple images. The images can then be rearranged into a grid or placed into a stack. This is useful for organzing content into categories or hiding images in a folder.
+				</p>
+			</div>
+		</section>
+		<section class="section--dark section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Process
+				</h2>
+				<p>
+					We give the user the ability to be messy with layout but also provide tools to quickly sort, group and organize images. Multiselection becomes essential in this workflow and we tested 3 ideas: procedural multiselect, toolbar tap and toolbar lasso. During testing, users had a difficult time discovering that multiselect was available during a single select. This was also due to a limitation in our prototypes that did not allow for gestures with 2 hands. Tapping on the Select button might take longer, but it’s also an explicit action that makes it much clearer to users that they were in a different mode.
+				</p>
+				<div class="row">
+					<div class="col-md-4 col">
+						<img src="https://placehold.it/5x3" class="s-process__img">
+						<p class="s-process__aside">
+							<strong class="s-process__em">Procedural Multiselect</strong><br>
+							Pros: Doesn't require the user to enter a different mode.<br>
+							Cons: Difficult to discover and deselect.
+						</p>
+					</div>
+					<div class="col-md-4 col">
+						<img src="https://placehold.it/5x3" class="s-process__img">
+						<p class="s-process__aside">
+							<strong class="s-process__em">Toolbar Tap</strong><br>
+							Pros: Simple to understand. Easy to deselect.<br>
+							Cons: Labourous and hard to tap on small or overlapping images.
+						</p>
+					</div>
+					<div class="col-md-4 col">
+						<img src="https://placehold.it/5x3" class="s-process__img">
+						<p class="s-process__aside">
+							<strong class="s-process__em">Toolbar Lasso</strong><br>
+							Pros: Easy to select many images at once.<br>
+							Cons: Only for contiguous selections. Least precise.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Import
+				</h2>
+				<p>
+					Tap the plus button in the toolbar to open the import panel. In this area the user can import from the camera roll, or switch between Pinterest, Flickr or Google Search. Drag any thumbnail directly onto the canvas or tap to select multiple images.
+				</p>
+			</div>
+		</section>
+		<section class="section--dark section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Process
+				</h2>
+				<p>
+					Getting images onto the canvas should be fast and straightforward without creating clutter. We experimented with a full screen import experience versus a smaller side panel design. The panel design afforded the ability to import and arrange on the canvas at the same time which in our testing nearly all users took advantage of. Originally the UI required users to tap on thumbnails to add images but there was a strong desire to drag, which in retrospect felt much more natural and precise.
+				</p>
+			</div>
+		</section>
+		<section class="s-finale section">
+			<div class="wrap-medium"></div>
+				<h2 class="s-finale__title">
+					Paperform
+				</h2>
+				<p class="s-finale__tagline">
+					Make sense of what inspires you.
+				</p>
+			</section>
+		</section>
+		<section class="section">
+			<div class="wrap-medium">
+				<h2 class="section__title">
+					Retrospective
+				</h3>
+				<p>
+					Duis libero enim, hendrerit eleifend dignissim eget, fermentum in mi. Ut ut ligula semper, blandit nulla in, sodales sem. Etiam at turpis tellus. Sed nulla elit, elementum ut erat at, vehicula pulvinar erat. Suspendisse felis tortor, cursus sed dui lacinia, dictum tempus tortor. Curabitur hendrerit ligula a neque blandit tempus. Pellentesque sed condimentum lorem. Sed interdum arcu et nisl convallis commodo.
+				</p>
+				<p>
+					Duis libero enim, hendrerit eleifend dignissim eget, fermentum in mi. Ut ut ligula semper, blandit nulla in, sodales sem. Etiam at turpis tellus. Sed nulla elit, elementum ut erat at, vehicula pulvinar erat. Suspendisse felis tortor, cursus sed dui lacinia, dictum tempus tortor. Curabitur hendrerit ligula a neque blandit tempus. Pellentesque sed condimentum lorem. Sed interdum arcu et nisl convallis commodo.
+				</p>
+			</div>
+		</section>
 	</main>
 	<footer class="footer wrap">
-		<p>
-			Boop.
+		<p class="footer__text">
+			Created by <a href="http://www.charliechao.com" target="_blank">Charlie Chao</a> and <a href="http://jameswng.com/" target="_blank">James Wang</a>.
 		</p>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
-	<script>if ((location.host || 'localhost').split(':')[0] === '127.0.0.1') document.write('<script src="http://localhost:35729/livereload.js?snipver=1"></' + 'script>')</script>
+	<script>if ((location.host || 'localhost').split(':')[0] === '127.0.0.1') document.write('<script src="http://localhost:35729/livereload.js?snipver=1"></' + 'script>');</script>
 </body>
 </html>
