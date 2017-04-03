@@ -1572,6 +1572,9 @@ hr {
 .text-center {
   text-align: center; }
 
+.text-small {
+  font-size: 0.875rem; }
+
 .text-info, .s-finale__tagline {
   color: rgba(43, 43, 43, 0.5); }
 
@@ -1673,8 +1676,13 @@ hr {
   margin-top: 3rem; }
 
 .s-research__hero {
-  display: block;
   margin-bottom: 2rem; }
+
+.s-research__hero-img {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  border-radius: 0.1875rem;
+  width: 100%; }
 
 .s-research__img {
   display: inline-block;
