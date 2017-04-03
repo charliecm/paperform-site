@@ -599,7 +599,7 @@ table {
   .last-sm {
     order: 1; } }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 640px) {
   .col-md {
     box-sizing: border-box;
     -webkit-box-flex: 0;
@@ -1557,13 +1557,17 @@ hr {
   width: 100%; }
 
 .header {
-  padding-top: 3.5rem;
-  height: 40rem;
+  padding-top: 2rem;
+  height: 28.75rem;
   background-color: #ebebeb;
   background-image: url(../img/hero.png);
   background-position: center bottom;
   background-size: auto 100%;
   background-repeat: no-repeat; }
+  @media only screen and (min-width: 641px) {
+    .header {
+      padding-top: 3.5rem;
+      height: 40rem; } }
 
 .header__title {
   font-size: 1.9375rem;
@@ -1608,18 +1612,24 @@ hr {
 
 .s-audit__img {
   margin-bottom: 3rem;
-  height: 26.625rem;
+  height: 10rem;
   background-image: url(../img/audit.jpg);
   background-position: center center;
   background-size: auto 100%;
   background-repeat: no-repeat; }
+  @media only screen and (min-width: 481px) {
+    .s-audit__img {
+      height: 15rem; } }
+  @media only screen and (min-width: 641px) {
+    .s-audit__img {
+      height: 26.625rem; } }
 
 .s-persona__profile {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 2rem; }
-  @media only screen and (min-width: 721px) {
+  @media only screen and (min-width: 481px) {
     .s-persona__profile {
       flex-direction: row;
       margin-bottom: 1.5rem; } }
@@ -1631,7 +1641,7 @@ hr {
   max-width: 11.25rem;
   width: 100%;
   height: auto; }
-  @media only screen and (min-width: 721px) {
+  @media only screen and (min-width: 481px) {
     .s-persona__photo {
       margin-right: 1.5rem;
       margin-bottom: 0;
